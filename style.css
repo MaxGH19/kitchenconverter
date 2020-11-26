@@ -79,7 +79,7 @@ footer {
 
 /* CSS GRID ELEMENTS STARTING HERE
  ********************************* */
-@media only screen and (min-width:600px) {
+@media only screen and (min-width:800px) {
 
 }
 
@@ -374,7 +374,7 @@ MOBILE DEVICES SETUP STARTS HERE
 ******************************** */
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .wrapper {
         display: grid;
         grid-template-columns: 1fr;
