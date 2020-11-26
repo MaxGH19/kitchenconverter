@@ -7,7 +7,6 @@
 <header>
     <!-- partial:index.partial.html -->
     <div class="germanyFlag">
-    <a HREF=german.html><img src="https://cdn.webshopapp.com/shops/94414/files/54006608/germany-flag-icon-free-download.jpg" width="30" height="20"></a>
     </div>
         <div id="pageTitle" class="pageTitle">
         <h1>KitchenConverter</h1>
@@ -18,6 +17,7 @@
 <div class="wrapper">
   <div class="side-image">
     <img src="https://cdn.pixabay.com/photo/2017/03/13/13/39/pancakes-2139844_960_720.jpg" alt="Yummy pancakes">
+    <img src="https://cdn.pixabay.com/photo/2020/10/30/16/33/cookies-5699047_1280.jpg">
   </div>
   <div class="subheader">
     <h2>Convert cups, tablespoons and teaspoons to grams or ounces</h2>
@@ -27,12 +27,9 @@
   whereas you prefer to count in grams or ounces? KitchenConverter is the solution!😊</p>
     </div>
 <div class="description2">
-<p>Select the unit of measurement, an ingredient and the amount to be converted</p>
+<p>Select the unit of measurement, an ingredient and the amount to be converted</p><br>
+    <button>Switch Units</button>
 </div>
-
-    <div class="unitButton">
-        <button>Switch Units</button>
-    </div>
 
   <div id="top" class="unitClass">
   <form>
@@ -69,23 +66,23 @@
           <input class="btn" onclick="resetButton(),jumpToTop()" type="button" value="Reset">
       </form>
   </div>
-</div><br>
-    <div class="resultField">
-  <label id="sentence" style="font-size:22px">Resuuuuult:</label><br>
+</div>
+  <div class="wrapper2">
+  <div class="resultField">
+  <label id="sentence" style="font-size:22px">Result:</label><br>
   <input id="result" disabled type="text" style="width: 150px; height:40px; text-align:center; font-size:30px; background-color:black; color:lightgrey"><br>
   </div>
-        <br>
 
 <!-- partial -->
   <script  src="JavaScript.js"></script>
-  <div id="lastQueries">
+  <div id="bottom" class="lastQueries">
       <p>Your last queries:</p>
       <p style="color:#7fffd4; font-size:10px">Refresh the page to clear the list</p>
       <br>
       <ul id="queriesList" style="list-style-type:none"></ul>
   </div>
 </body>
-<div>
+</div>
   <footer>
 
     <a href="#pageTitle" style="color:black">Jump to top</a>

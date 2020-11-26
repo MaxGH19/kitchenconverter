@@ -59,17 +59,15 @@ body {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1.5fr 0.5fr;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 2fr 1fr 1fr;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+    grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
     grid-template-areas: 
         "pic con1 con1 space" 
         "pic con2 con2 space" 
         "pic con3 con3 space" 
-        "pic con4 con4 space" 
-        "pic con5 con5 space"
-        "spc con6 con6 space"
-        "spc con7 con7 space";
-    place-items: center;
+        "pic con4 con4 space"
+        "pic con5 con5 space";
+    align-self: center;
     text-align: center;
     grid-gap:0.2rem;
 }
@@ -84,33 +82,41 @@ body {
     height: auto;
 }
 
-
-
 .subheader {
     background: black;
     color: white;
-    font-size: 22px;
-    align-self: start;
+    font-size: 1.3em;
+    align-self: center;
     grid-area: con1;
 }
 
 .description {
     background: black;
     color: #7fffd4;
-    font-size: 20px;
-    align-self: center;
-    justify-self: center;
+    font-size: 1.2em;
+    align-items: center;
+    justify-items: center;
     grid-area: con2;
 }
 
 .description2 {
     background: black;
     color: white;
-    font-size: 20px;
-    align-self: center;
+    font-size: 1.2em;
+    align-items: start;
     grid-area: con3;
 }
 
+.description2 > button {
+    background-color: #7FFFD4;
+    color: black;
+    padding: 8px 12px;
+    height: 40px;
+    size:22px;
+. border-radius;
+. text-shadow;
+. transition(all .5 s);
+}
 
 .unitClass {
     grid-area: con4;
@@ -120,22 +126,25 @@ body {
     grid-area: con5;
 }
 
-.unitButton {
-    grid-area: space;
-    justify-items: end;
-    height: 30px;
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas:
+        "spc conte1 conte1 spc2"
+        "spc conte2 conte2 spc2";
+    align-self: center;
+    text-align: center;
+    grid-gap:0.2rem;
 }
 
 .resultField {
-    grid-area: con6;
-    align-items: center;
+    grid-area: conte1;
 }
 
 .lastQueries {
-    grid-area: con7;
+    grid-area: conte2;
 }
-
-
 /* CSS GRID ELEMENTS ENDING HERE
  ********************************* */
 header {

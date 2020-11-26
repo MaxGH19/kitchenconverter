@@ -7,7 +7,6 @@
 <header>
     <!-- partial:index.partial.html -->
     <div class="germanyFlag">
-    <a HREF=german.html><img src="https://cdn.webshopapp.com/shops/94414/files/54006608/germany-flag-icon-free-download.jpg" width="30" height="20"></a>
     </div>
         <div id="pageTitle" class="pageTitle">
         <h1>KitchenConverter</h1>
@@ -42,7 +41,7 @@
   </form>
 </div>
   <div class="secondForm">
-      <form id="numberInput">
+      <form id="numberInput" style="font-size:22px">
           Select an Ingredient<br> <select id="ingrList" onchange="setIngrText()" style="width: 320px; font-size:16px">
               <option style="font-size:16px;color:grey" value="0">--Select--</option>
               <option style="font-size:16px" value="130">Flour</option>
@@ -59,7 +58,7 @@
 
           <p id="errorIng" style="color:red; font-size:14px"></p><br>
 
-          <input id="input" type="range" min="0" value="0" max="17" step="1" onchange="transfer(), jumpToBottom()">
+          <input id="input" type="range" min="0" value="0" max="17" step="1" style="max-width:500px" onchange="transfer(), jumpToBottom()">
           <p id="output" style="color:#7FFFD4"></p><p id="errorAmt" style="color:red; font-size:14px"></p><br>
 
           <input class="btn" onclick="convertNumbers(),setIngrText()" type="button" value="Convert to grams">
@@ -81,7 +80,6 @@
       <p style="color:#7fffd4; font-size:10px">Refresh the page to clear the list</p>
       <br>
       <ul id="queriesList" style="list-style-type:none"></ul>
-  </div>
   </div>
 </body>
 </div>
