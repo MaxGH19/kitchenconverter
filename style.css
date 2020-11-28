@@ -345,7 +345,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .wrapper2 {
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
     grid-template-rows: 0.5fr 0.5fr;
     grid-template-areas:
         "spc conte1 conte1 spc2"
@@ -362,6 +362,43 @@ input[type=range]:focus::-ms-fill-upper {
 .lastQueries {
     grid-area: conte2;
 }
+
+.wrapper3 {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    grid-template-columns: 1.5fr 4fr 1.5fr;
+    grid-template-rows: auto auto auto auto auto;
+    grid-template-areas:
+            "empty head3 xxx"
+            "empty uncho xxx"
+            "empty frm3 xxx"
+            "empty res3 xxx"
+            "empty lasqu xxx";
+}
+
+.headline3 {
+    grid-area: head3;
+    align-items: end;
+}
+
+.unitChoice {
+    grid-area: uncho;
+}
+
+.form3 {
+    grid-area: frm3;
+    justify-content: end;
+}
+
+.resultOw {
+    grid-area: res3;
+}
+
+.lastQueriesOw {
+    grid-area: lasqu;
+}
+
 /* CSS GRID ELEMENTS ENDING HERE
  *********************************
 */

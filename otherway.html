@@ -4,20 +4,20 @@
   <meta charset="UTF-8" content="width=device-width, initial-scale=1.0">
   <title>From Grams to Cups</title>
 </head>
-<div id="pageTitle" class="#pageTitle">
+<link rel="stylesheet" href="./style.css">
+<div id="pageTitle" class="wrapper3">
+  <div class="headline3">
   <h1>From Grams to Cups & More</h1>
 </div>
-  <link rel="stylesheet" href="./style.css">
-  <div id="GramsOuncesChoice" >
+  <div id="GramsOuncesChoice" class="unitChoice">
   <form>
     <group id="groupChoiceGrams" class="inline-radio" onchange="displayGramsOunces()">
-      <div id="GramsOunces"><input type="radio" name="units2" value="Grams" checked><label>Grams</label></div>
-      <div><input type="radio" name="units2" value="Ounces"><label>Ounces</label></div>
+      <div id="SetGrams"><input type="radio" name="units2" value="Grams" checked><label>Grams</label></div>
+      <div id="SetOunces"><input type="radio" name="units2" value="Ounces"><label>Ounces</label></div>
     </group>
   </form>
 </div>
-
-<div class="form">
+<div class="form3">
   <form id="numberInputSecond">
     Select an Ingredient<br> <select id="ingrListSecond" onchange="setIngrTextSecond()" style="width: 320px; font-size:16px">
       <option style="font-size:16px;color:grey" value="0">--Select--</option>
@@ -44,7 +44,7 @@
     <input class="btn" onclick="resetButtonSecond(),jumpToGramsOunces()" type="button" value="Reset">
   </form>
 </div><br>
- <div id="result2">
+ <div id="result2" class="resultOw">
   <label id="sentenceSecond" style="font-size:22px">Result:</label><br>
   <input id="resultSecond" disabled type="text" style="width: 150px; height:40px; text-align:center; font-size:30px; background-color:white; color:black"><br>
    <label id="sentenceThird" style="font-size:22px"></label><br>
@@ -54,16 +54,15 @@
 <!-- partial -->
   <script  src="JavaScript.js"></script>
   <script  src="Second.js"></script>
-  <div id="bottom">
+  <div class="lastQueriesOw">
       <p>Your last queries:</p>
       <p style="color:#7fffd4; font-size:10px">Refresh the page to clear the list</p>
       <br>
-      <ul id="queriesList" style="list-style-type:none"></ul>
+      <ul id="queriesListOw" style="list-style-type:none"></ul>
   </div>
+</div>
 </body>
-<div>
   <footer>
-
     <a href="#pageTitle" style="color:black">Jump to top</a>
   </footer>
 </div>
