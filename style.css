@@ -78,103 +78,6 @@ footer {
 }
 
 
-/* CSS GRID ELEMENTS STARTING HERE
- ********************************* */
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-    grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
-    grid-template-areas: 
-        "pic con1 con1 space" 
-        "pic con2 con2 space" 
-        "pic con3 con3 space" 
-        "pic con4 con4 space"
-        "pic con5 con5 space";
-    align-self: center;
-    text-align: center;
-    grid-gap:0.2rem;
-}
-
-.side-image {
-    grid-area: pic;
-    grid-gap: 0rem;
-}
-
-.side-image > img {
-    width: 100%;
-    height: auto;
-}
-
-.subheader {
-    background: black;
-    color: white;
-    font-size: 1.3em;
-    align-self: center;
-    grid-area: con1;
-}
-
-.description {
-    background: black;
-    color: #7fffd4;
-    font-size: 1.2em;
-    align-items: center;
-    justify-items: center;
-    grid-area: con2;
-}
-
-.description2 {
-    background: black;
-    color: white;
-    font-size: 1.2em;
-    align-items: start;
-    grid-area: con3;
-}
-
-.description2 > button {
-    background-color: #7FFFD4;
-    color: black;
-    padding: 8px 12px;
-    height: 40px;
-    size:22px;
-. border-radius;
-. text-shadow;
-. transition(all .5 s);
-}
-
-.unitClass {
-    grid-area: con4;
-}
-
-.secondForm {
-    grid-area: con5;
-}
-
-.wrapper2 {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    grid-template-areas:
-        "spc conte1 conte1 spc2"
-        "spc conte2 conte2 spc2";
-    align-self: center;
-    text-align: center;
-    grid-gap:0.2rem;
-}
-
-.resultField {
-    grid-area: conte1;
-}
-
-.lastQueries {
-    grid-area: conte2;
-}
-/* CSS GRID ELEMENTS ENDING HERE
- *********************************
-*/
-
-
-
 .errorMessages {
   color:white;
   background-color: red;
@@ -366,7 +269,108 @@ input[type=range]::-ms-fill-upper {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
-/* *****************************
+
+
+/* CSS GRID ELEMENTS STARTING HERE
+ ********************************* */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+    grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
+    grid-template-areas:
+        "pic con1 con1 space"
+        "pic con2 con2 space"
+        "pic con3 con3 space"
+        "pic con4 con4 space"
+        "pic con5 con5 space";
+    align-self: center;
+    text-align: center;
+    grid-gap:0.2rem;
+}
+
+.side-image {
+    grid-area: pic;
+    grid-gap: 0rem;
+}
+
+.side-image > img {
+    width: 100%;
+    height: auto;
+}
+
+.subheader {
+    background: black;
+    color: white;
+    font-size: 1.3em;
+    align-self: center;
+    grid-area: con1;
+}
+
+.description {
+    background: black;
+    color: #7fffd4;
+    font-size: 1.2em;
+    align-items: center;
+    justify-items: center;
+    grid-area: con2;
+}
+
+.description2 {
+    background: black;
+    color: white;
+    font-size: 1.2em;
+    align-items: start;
+    grid-area: con3;
+}
+
+.description2 > button {
+    background-color: #7FFFD4;
+    color: black;
+    padding: 8px 12px;
+    height: 40px;
+    size:22px;
+. border-radius;
+. text-shadow;
+. transition(all .5 s);
+}
+
+.unitClass {
+    grid-area: con4;
+}
+
+.secondForm {
+    grid-area: con5;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas:
+        "spc conte1 conte1 spc2"
+        "spc conte2 conte2 spc2";
+    align-self: center;
+    text-align: center;
+    grid-gap:0.2rem;
+}
+
+.resultField {
+    grid-area: conte1;
+}
+
+.lastQueries {
+    grid-area: conte2;
+}
+/* CSS GRID ELEMENTS ENDING HERE
+ *********************************
+*/
+
+
+
+
+/*
+*****************************
 MOBILE DEVICES SETUP STARTS HERE
 ******************************** */
 
@@ -375,9 +379,10 @@ MOBILE DEVICES SETUP STARTS HERE
     .wrapper {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto;
         align-items: center;
         grid-template-areas:
+        "hdr"
         "subheader"
         "descr1"
         "descr2"
@@ -386,37 +391,33 @@ MOBILE DEVICES SETUP STARTS HERE
 
     }
     header {
-        max-width: 100%;
+        width: 100%;
         max-height: 40px;
-        font-size: 1em;
+        grid-area: hdr;
+        align-items: start;
+    }
 
+    footer {
+        width: 100%;
+        max-height: 30px;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .pageTitle {
         color: black;
-        font-size: 12px;
-        place-items: center;
+        font-size: 0.8em;
     }
 
     .side-image {
         grid-gap: 0rem;
-        grid-area: picture;
+        display: none;
     }
 
     .side-image > img {
         display: none;
     }
 
-    /*.side-image > img:nth-of-type(1) {
-        grid-area: pic1;
-        max-width: 0.3fr;
-        height: auto;
-    }
-    .side-image > img:nth-of-type(2) {
-    grid-area: pic2;
-    width: 0.3fr;
-    height: auto;
-    }*/
 
     .subheader {
         background: black;
