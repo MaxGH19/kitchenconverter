@@ -205,8 +205,15 @@ function transfer() {
   function jumpToBottom() {
 
     location.href = "#";
-    location.href = "#bottom";
+    location.href = "#result";
   }
+
+function jumpToG2C() {
+
+  location.href = "#";
+  location.href = "#bottom";
+}
+
 
 function jumpToTop() {
 
