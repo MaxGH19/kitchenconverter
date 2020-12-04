@@ -392,7 +392,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .form3 {
     grid-area: frm3;
-    justify-content: end;
+    justify-items: center;
 }
 
 .resultOw {
