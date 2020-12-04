@@ -242,7 +242,7 @@ var z = undefined;
 var lastQuery = "";
 var queryData = "";
 
-function query () {
+function query() {
   queryData = [userInput, unit, ingrTextLower];
     document.getElementById("sentence").innerHTML = queryData[0] + " " + queryData[1] + " of " + queryData[2] + " is equal to:";
 }

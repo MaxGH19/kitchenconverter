@@ -63,10 +63,6 @@ header {
     width: 100%;
 }
 
-header > secondHeader {
-    height: 30vh;
-}
-
 footer {
     font-family: sans-serif;
     background: linear-gradient(to bottom,#7fffd4,#7fffd4);
@@ -300,6 +296,10 @@ input[type=range]:focus::-ms-fill-upper {
 .side-image > img {
     width: 100%;
     height: auto;
+}
+
+.secondHeader {
+    height: 30vh;
 }
 
 .subheader {
