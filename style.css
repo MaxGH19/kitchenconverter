@@ -155,6 +155,9 @@ form {
   color: black;
 }
 
+input[type=text] {
+    margin: auto;
+}
 
 input[type=range] {
   -webkit-appearance: none;
@@ -371,20 +374,21 @@ input[type=range]:focus::-ms-fill-upper {
     display: grid;
     width: 100%;
     justify-items: center;
-    grid-template-columns: 1.5fr 4fr 1.5fr;
-    grid-template-rows: auto auto auto auto auto;
+    align-items: center;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+    grid-template-rows: 0.5fr 0.5fr 3fr 1fr 1fr;
     grid-template-areas:
-            "empty head3 xxx"
-            "empty uncho xxx"
-            "empty frm3 xxx"
-            "empty res3 xxx"
-            "empty lasqu xxx";
+            "empty head3 head3 xxx"
+            "empty uncho uncho xxx"
+            "empty frm3 frm3 xxx"
+            "empty res3 res3 xxx"
+            "empty lasqu lasqu xxx";
 }
 
 .headline3 {
     grid-area: head3;
-    align-items: end;
 }
+
 
 .unitChoice {
     grid-area: uncho;
@@ -392,15 +396,20 @@ input[type=range]:focus::-ms-fill-upper {
 
 .form3 {
     grid-area: frm3;
-    justify-items: center;
+}
+
+.otherwayForm {
+    text-align: center;
 }
 
 .resultOw {
     grid-area: res3;
+    text-align: center;
 }
 
 .lastQueriesOw {
     grid-area: lasqu;
+    text-align: center;
 }
 
 /* CSS GRID ELEMENTS ENDING HERE

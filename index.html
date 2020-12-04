@@ -88,6 +88,7 @@
 <br>
 <br>
 <header class="secondHeader"></header>
+<body>
 <div id="pageTitle" class="wrapper3">
     <div class="headline3">
         <h1>From Grams to Cups & More</h1>
@@ -101,8 +102,9 @@
         </form>
     </div>
     <div class="form3">
-        <form id="numberInputSecond">
-            Select an Ingredient<br> <select id="ingrListSecond" onchange="setIngrTextSecond()" style="width: 320px; font-size:16px">
+        <form id="numberInputSecond" class="otherwayForm">
+            Select an Ingredient<br>
+            <select id="ingrListSecond" onchange="setIngrTextSecond()">
             <option style="font-size:16px;color:grey" value="0">--Select--</option>
             <option style="font-size:16px" value="130">Flour</option>
             <option style="font-size:16px" value="200">Sugar</option>
@@ -123,7 +125,7 @@
 
             <input class="btn" onclick="convertToCups(),setIngrTextSecond()" type="button" value="Convert to cups">
             <input class="btn" onclick="convertToTablespoons(),setIngrTextSecond()" type="button" value="Convert to tablespoons">
-            <input class="btn" onclick= "convertToTeaspoons(), setIngrTextSecond()" type="button" value="Convert to teaspoons">
+            <input class="btn" onclick= "convertToTeaspoons(), setIngrTextSecond()" type="button" value="Convert to teaspoons"><br>
             <input class="btn" onclick="resetButtonSecond()" type="button" value="Reset">
         </form>
     </div><br>
