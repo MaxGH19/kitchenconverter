@@ -236,9 +236,6 @@ var ingrTextLowerSecond = "ingredient";
 var z = undefined;
 
 
-
-//const list = document.getElementById('queriesList');
-
 var lastQuery = "";
 var queryData = "";
 
@@ -273,8 +270,8 @@ function setListGerman() {
 }
 
 /*
-************ SECOND PART COMES HERE SEPARATED **********
-///////////////////////////////////////////////////////*/
+************ SECOND PART ("otherway") COMES HERE SEPARATED **********
+/////////////////////////////////////////////////////// */
 
 var unitSecond = "Grams";
 var convSecond = 1;
@@ -316,14 +313,11 @@ function jumpToResult() {
   location.href = "#result2";
 }
 
-
 function setIngrTextSecond() {
   z = document.getElementById("ingrListSecond");
   ingrTextSecond = z.options[z.selectedIndex].innerHTML;
   ingrTextLowerSecond = ingrTextSecond.toLowerCase();
 }
-
-
 
 var inputGrams = 0;
 var numberIngr = 0;
@@ -348,6 +342,7 @@ function convertToCups () {
     toUnit = "Cups"
     jumpToResult();
     querySecond();
+    setListCups();
   }
 }
 
@@ -362,6 +357,7 @@ function convertToTablespoons () {
   toUnit = "Tablespoons";
   jumpToResult();
   querySecond();
+  setListTbl();
 }
 
 var resultTea = 0;
@@ -375,6 +371,7 @@ function convertToTeaspoons () {
   toUnit = "Teaspoons";
   jumpToResult();
   querySecond();
+  setListTea();
 }
 
 function querySecond() {
@@ -383,3 +380,31 @@ function querySecond() {
   document.getElementById("sentenceThird").innerHTML = toUnit;
 }
 
+var entryOw = "";
+
+function setListCups() {
+  resultOw = document.getElementById("resultSecond").value;
+  entryOw = document.createElement('li');
+  queryDataSecond = [inputGrams, unitSecond, ingrTextLowerSecond];
+  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " of " + queryDataSecond[2] + " = " + resultOw + " Cups";
+  entryOw.appendChild(document.createTextNode(lastQueryOw));
+  document.getElementById('queriesListOw').appendChild(entryOw);
+}
+
+function setListTbl() {
+  resultOw = document.getElementById("resultSecond").value;
+  entryOw = document.createElement('li');
+  queryDataSecond = [inputGrams, unitSecond, ingrTextLowerSecond];
+  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " of " + queryDataSecond[2] + " = " + resultOw + " Tablespoons";
+  entryOw.appendChild(document.createTextNode(lastQueryOw));
+  document.getElementById('queriesListOw').appendChild(entryOw);
+}
+
+function setListTea() {
+  resultOw = document.getElementById("resultSecond").value;
+  entryOw = document.createElement('li');
+  queryDataSecond = [inputGrams, unitSecond, ingrTextLowerSecond];
+  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " of " + queryDataSecond[2] + " = " + resultOw + " Teaspoons";
+  entryOw.appendChild(document.createTextNode(lastQueryOw));
+  document.getElementById('queriesListOw').appendChild(entryOw);
+}
