@@ -134,13 +134,13 @@ function convertToOuncesGer () {
   }
 }
 
-
+var e;
 
 function resetButton() {
   document.getElementById("numberInput").reset();
   document.getElementById("result").value = "";
   document.getElementById("input").value = 0;
-  document.getElementById("output").innerHTML = 0;
+  document.getElementById("output").innerHTML = "0";
   document.getElementById("errorIng").innerHTML = "";
   document.getElementById("errorAmt").innerHTML = "";
   document.getElementById("sentence").innerHTML = "Result:";
@@ -163,6 +163,7 @@ var output = document.getElementById("output");
 inputFragments.oninput = function() {
   output.innerHTML = values[this.value];
 }
+
 inputFragments.oninput();
 
 var n = 0;
@@ -237,7 +238,7 @@ var z = undefined;
 
 
 var lastQuery = "";
-var queryData = "";
+var queryData = "", queryDataGer;
 
 function query() {
   queryData = [userInput, unit, ingrTextLower];
@@ -250,6 +251,8 @@ function queryGerman () {
 }
 
 var entry = "";
+var result2 = 0;
+
 function setList() {
   result2 = document.getElementById("result").value;
   entry = document.createElement('li');
@@ -259,6 +262,8 @@ function setList() {
     document.getElementById('queriesList').appendChild(entry);
 
 }
+
+var resultGer = 0;
 
 function setListGerman() {
   resultGer = document.getElementById("result").value;
@@ -335,7 +340,7 @@ function convertToCups () {
     location.href = "#ingrListSecond";
   }
 
-  else {
+  if (resultCups > 0) {
 
     document.getElementById("resultSecond").value = resultCups;
     toUnit = "Cups"
@@ -375,22 +380,14 @@ function convertToTeaspoons () {
   inputGrams = parseFloat(document.getElementById("inputFieldGrams").value);
   resultTea = ((inputGrams * convSecond) * 48) / numberIngr;
   resultTea = resultTea.toFixed(2);
-
-  if (numberIngr === 0) {
-    document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient";
-    location.href = "#";
-    location.href = "#ingrListSecond";
-  }
-  else {
-    document.getElementById("resultSecond").value = resultTea;
-    toUnit = "Teaspoons";
-    jumpToResult();
-    querySecond();
-    setListTea();
-  }
+  document.getElementById("resultSecond").value = resultTea;
+  toUnit = "Teaspoons";
+  jumpToResult();
+  querySecond();
+  setListTea();
 }
 
-
+var queryDataSecond;
 
 function querySecond() {
   queryDataSecond = [inputGrams, unitSecond, ingrTextLowerSecond];
@@ -399,6 +396,8 @@ function querySecond() {
 }
 
 var entryOw = "";
+var resultOw;
+var lastQueryOw;
 
 function setListCups() {
   resultOw = document.getElementById("resultSecond").value;

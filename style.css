@@ -56,7 +56,6 @@ header {
     background: linear-gradient(to bottom,#7fffd4,#7fffd4);
     color: black;
     height: 15vh;
-    margin: 0;
     display: inline-grid;
     grid-template-columns: 10% 90%;
     justify-items: center;
@@ -80,11 +79,8 @@ footer {
   color:red;
   background-color: black;
   font-size:14px;
-  width: 200px;
-  place-items: center;
+  justify-content: center;
   text-align: center;
-  left: 50%;
-  margin-left: 100px;
 
 }
 
@@ -108,10 +104,9 @@ form {
 . transition(all .5 s);
 }
 
-&:hover{
-   text-decoration: none;
-   background-color: lighten(#7FFFD4, 60%);
-   color: lighten(black, 10%);
+.btn:hover{
+text-decoration: none;
+filter: brightness(75%);
  }
 
 .inline-radio {
@@ -570,7 +565,7 @@ MOBILE DEVICES SETUP STARTS HERE
         grid-area: lasquM;
         text-align: center;
     }
-    
+
 
     form {
         background: black;
