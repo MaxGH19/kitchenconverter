@@ -527,6 +527,50 @@ MOBILE DEVICES SETUP STARTS HERE
     }
 
 
+    .wrapper3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        "head3M"
+        "unchoM"
+        "frm3M"
+        "res3M"
+        "lasquM";
+        align-self: center;
+        text-align: center;
+        grid-gap:0.2rem;
+    }
+
+    .headline3 {
+        grid-area: head3M;
+    }
+
+
+    .unitChoice {
+        grid-area: unchoM;
+        display: flex;
+    }
+
+    .form3 {
+        grid-area: frm3M;
+        display: flex;
+    }
+
+    .otherwayForm {
+        text-align: center;
+    }
+
+    .resultOw {
+        grid-area: res3M;
+        text-align: center;
+    }
+
+    .lastQueriesOw {
+        grid-area: lasquM;
+        text-align: center;
+    }
+    
 
     form {
         background: black;
