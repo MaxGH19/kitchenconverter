@@ -376,7 +376,7 @@ input[type=range]:focus::-ms-fill-upper {
     justify-items: center;
     align-items: center;
     grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-    grid-template-rows: 0.5fr 0.5fr 3fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr;
     grid-template-areas:
             "empty head3 head3 xxx"
             "empty uncho uncho xxx"
