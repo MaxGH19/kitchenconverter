@@ -296,6 +296,16 @@ input[type=range]:focus::-ms-fill-upper {
     height: auto;
 }
 
+.advertisement {
+    grid-area: space;
+}
+.advertisement > img {
+    width: 1fr;
+    height: auto;
+    margin-top: 30px;
+}
+
+
 .secondHeader {
     height: 30vh;
 }
