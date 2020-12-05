@@ -61,10 +61,11 @@
 
           <input id="input" type="range" min="0" value="0" max="17" step="1" onchange="transfer(), jumpToBottom()">
           <p id="output" style="color:#7FFFD4"></p><p id="errorAmt" style="color:red; font-size:14px"></p><br>
-
+          <div id="buttons">
           <input class="btn" onclick="convertNumbers(),setIngrText()" type="button" value="Convert to grams">
           <input class="btn" onclick="convertToOunces(),setIngrText()" type="button" value="Convert to oz">
-          <input class="btn" onclick="resetButton(),jumpToTop()" type="button" value="Reset">
+              <input class="btn" onclick="resetButton(),jumpToTop()" type="button" value="Reset">
+          </div>
       </form>
   </div>
 </div>
@@ -89,7 +90,7 @@
 <br>
 <header class="secondHeader"></header>
 <body>
-<div id="pageTitle" class="wrapper3">
+<div id="bottomWrapper" class="wrapper3">
     <div class="headline3">
         <h1>From Grams to Cups & More</h1>
     </div>
@@ -147,7 +148,7 @@
 </div>
 </body>
 <footer>
-    <a href="#pageTitle" style="color:black">Jump to top</a>
+    <a href="#pageTitleId" style="color:black">Jump to top</a>
 </footer>
 </div>
 

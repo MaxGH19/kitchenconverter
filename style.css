@@ -57,7 +57,7 @@ header {
     color: black;
     height: 15vh;
     margin: 0;
-    display: grid;
+    display: inline-grid;
     grid-template-columns: 10% 90%;
     justify-items: center;
     width: 100%;
@@ -77,8 +77,8 @@ footer {
 
 
 .errorMessages {
-  color:white;
-  background-color: red;
+  color:red;
+  background-color: black;
   font-size:14px;
   width: 200px;
   place-items: center;
@@ -392,10 +392,12 @@ input[type=range]:focus::-ms-fill-upper {
 
 .unitChoice {
     grid-area: uncho;
+    display: flex;
 }
 
 .form3 {
     grid-area: frm3;
+    display: flex;
 }
 
 .otherwayForm {
@@ -500,6 +502,9 @@ MOBILE DEVICES SETUP STARTS HERE
         grid-area: form2;
         max-width: 100%;
     }
+    .secondHeader {
+        height: 10vh;
+    }
 
     .wrapper2 {
         display: grid;
@@ -526,7 +531,7 @@ MOBILE DEVICES SETUP STARTS HERE
     form {
         background: black;
         width: 100%;
-        display: block;
+        display: inline-block;
         margin: auto;
         padding: 10px;
         box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);

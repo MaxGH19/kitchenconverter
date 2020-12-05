@@ -205,13 +205,13 @@ function transfer() {
   function jumpToBottom() {
 
     location.href = "#";
-    location.href = "#result";
+    location.href = "#top";
   }
 
 function jumpToG2C() {
 
   location.href = "#";
-  location.href = "#bottom";
+  location.href = "#GramsOuncesChoice";
 }
 
 
@@ -330,13 +330,12 @@ function convertToCups () {
   resultCups = resultCups.toFixed(2);
 
   if (numberIngr === 0) {
-    document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient ";
+    document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient";
+    location.href = "#";
+    location.href = "#ingrListSecond";
   }
 
-  if (inputGrams < 1) {
-    document.getElementById("errorAmtSecond").innerHTML = "Please enter an amount";
-  }
-  if (resultCups > 0) {
+  else {
 
     document.getElementById("resultSecond").value = resultCups;
     toUnit = "Cups"
@@ -353,12 +352,21 @@ function convertToTablespoons () {
   inputGrams = parseFloat(document.getElementById("inputFieldGrams").value);
   resultTbl = ((inputGrams * convSecond) * 16) / numberIngr;
   resultTbl = resultTbl.toFixed(2);
-  document.getElementById("resultSecond").value = resultTbl;
-  toUnit = "Tablespoons";
-  jumpToResult();
-  querySecond();
-  setListTbl();
-}
+
+  if (numberIngr === 0) {
+    document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient";
+    location.href = "#";
+    location.href = "#ingrListSecond";
+  }
+
+  else {
+    document.getElementById("resultSecond").value = resultTbl;
+    toUnit = "Tablespoons";
+    jumpToResult();
+    querySecond();
+    setListTbl();
+  }
+  }
 
 var resultTea = 0;
 
@@ -367,12 +375,22 @@ function convertToTeaspoons () {
   inputGrams = parseFloat(document.getElementById("inputFieldGrams").value);
   resultTea = ((inputGrams * convSecond) * 48) / numberIngr;
   resultTea = resultTea.toFixed(2);
-  document.getElementById("resultSecond").value = resultTea;
-  toUnit = "Teaspoons";
-  jumpToResult();
-  querySecond();
-  setListTea();
+
+  if (numberIngr === 0) {
+    document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient";
+    location.href = "#";
+    location.href = "#ingrListSecond";
+  }
+  else {
+    document.getElementById("resultSecond").value = resultTea;
+    toUnit = "Teaspoons";
+    jumpToResult();
+    querySecond();
+    setListTea();
+  }
 }
+
+
 
 function querySecond() {
   queryDataSecond = [inputGrams, unitSecond, ingrTextLowerSecond];
