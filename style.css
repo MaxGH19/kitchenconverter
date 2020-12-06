@@ -14,11 +14,11 @@ select {
 
 .pageTitle {
     color: black;
-    place-items: start;
 }
 
 .germanyFlag {
     justify-items: center;
+    text-align: center;
 }
 
 .input-grams {
@@ -53,11 +53,12 @@ body {
 
 header {
     font-family: sans-serif;
-    background: linear-gradient(to bottom,#7fffd4,#7fffd4);
+    background: #7fffd4;
     color: black;
-    height: 15vh;
+    height: 90px;
     display: inline-grid;
     grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
     justify-items: center;
     width: 100%;
 }
@@ -298,6 +299,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .advertisement {
     grid-area: space;
+    display: none;
 }
 .advertisement > img {
     width: 1fr;
@@ -473,6 +475,9 @@ MOBILE DEVICES SETUP STARTS HERE
         display: none;
     }
 
+    .advertisement {
+        display: none;
+    }
     .subheader {
         background: black;
         color: white;

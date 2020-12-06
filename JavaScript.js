@@ -278,7 +278,7 @@ function setListGerman() {
 ************ SECOND PART ("otherway") COMES HERE SEPARATED **********
 /////////////////////////////////////////////////////// */
 
-var unitSecond = "Grams";
+var unitSecond = "g";
 var convSecond = 1;
 
 function displayGramsOunces() {
@@ -288,10 +288,10 @@ function displayGramsOunces() {
     if (ele[i].checked) unitSecond = ele[i].value;
 
     switch (unitSecond) {
-      case "Grams":
+      case "g":
         convSecond = 1;
         break;
-      case "Ounces":
+      case "oz":
         convSecond = 28.3495;
         break;
     }
@@ -328,6 +328,7 @@ var inputGrams = 0;
 var numberIngr = 0;
 var resultCups = 0;
 var toUnit = "";
+
 function convertToCups () {
   numberIngr = parseInt(document.getElementById("ingrListSecond").value);
   inputGrams = parseFloat(document.getElementById("inputFieldGrams").value);
@@ -380,11 +381,20 @@ function convertToTeaspoons () {
   inputGrams = parseFloat(document.getElementById("inputFieldGrams").value);
   resultTea = ((inputGrams * convSecond) * 48) / numberIngr;
   resultTea = resultTea.toFixed(2);
-  document.getElementById("resultSecond").value = resultTea;
-  toUnit = "Teaspoons";
-  jumpToResult();
-  querySecond();
-  setListTea();
+
+  if (numberIngr < 0.1) {
+    document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient";
+    location.href = "#";
+    location.href = "#ingrListSecond";
+  }
+
+  else if (numberIngr > 1) {
+    document.getElementById("resultSecond").value = resultTea;
+    toUnit = "Teaspoons";
+    jumpToResult();
+    querySecond();
+    setListTea();
+  }
 }
 
 var queryDataSecond;
@@ -394,6 +404,14 @@ function querySecond() {
   document.getElementById("sentenceSecond").innerHTML = queryDataSecond[0] + " " + queryDataSecond[1] + " of " + queryDataSecond[2] + " is equal to:";
   document.getElementById("sentenceThird").innerHTML = toUnit;
 }
+
+function querySecondGer() {
+  queryDataSecond = [inputGrams, unitSecond, ingrTextSecond];
+  document.getElementById("sentenceSecond").innerHTML = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " sind umgerechnet:";
+  document.getElementById("sentenceThird").innerHTML = toUnit;
+}
+
+
 
 var entryOw = "";
 var resultOw;
@@ -425,3 +443,31 @@ function setListTea() {
   entryOw.appendChild(document.createTextNode(lastQueryOw));
   document.getElementById('queriesListOw').appendChild(entryOw);
 }
+
+function setListCupsGer() {
+  resultOw = document.getElementById("resultSecond").value;
+  entryOw = document.createElement('li');
+  queryDataSecond = [inputGrams, unitSecond, ingrTextSecond];
+  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " = " + resultOw + " Cups";
+  entryOw.appendChild(document.createTextNode(lastQueryOw));
+  document.getElementById('queriesListOw').appendChild(entryOw);
+}
+
+function setListTblGer() {
+  resultOw = document.getElementById("resultSecond").value;
+  entryOw = document.createElement('li');
+  queryDataSecond = [inputGrams, unitSecond, ingrTextSecond];
+  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " = " + resultOw + " Esslöffel";
+  entryOw.appendChild(document.createTextNode(lastQueryOw));
+  document.getElementById('queriesListOw').appendChild(entryOw);
+}
+
+function setListTeaGer() {
+  resultOw = document.getElementById("resultSecond").value;
+  entryOw = document.createElement('li');
+  queryDataSecond = [inputGrams, unitSecond, ingrTextLowerSecond];
+  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " = " + resultOw + " Teelöffel";
+  entryOw.appendChild(document.createTextNode(lastQueryOw));
+  document.getElementById('queriesListOw').appendChild(entryOw);
+}
+
