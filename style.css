@@ -6,17 +6,19 @@ html {
 select {
   border: 1px solid #ccc;
   vertical-align: top;
-  height: 28px;
+  height: 40px;
+    font-size: 24px;
+    min-width: 300px;
+    max-width: 400px;
 }
 
 .pageTitle {
     color: black;
-    font-size: 24px;
-    place-items: start;
 }
 
 .germanyFlag {
     justify-items: center;
+    text-align: center;
 }
 
 .input-grams {
@@ -41,8 +43,6 @@ input, select {
 }
 
 
-
-
 body {
     font-family: sans-serif;
     background: linear-gradient(15deg, black 50%, black 50%);
@@ -53,15 +53,13 @@ body {
 
 header {
     font-family: sans-serif;
-    background: linear-gradient(to bottom,#7fffd4,#7fffd4);
+    background: #7fffd4;
     color: black;
-    height: 15vh;
-    margin: 0;
-    display: grid;
-    grid-template-columns: 15% 85%;
-    place-items: center;
+    height: 90px;
+    display: inline-grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: auto;
     justify-items: center;
-    text-align: center;
     width: 100%;
 }
 
@@ -69,7 +67,7 @@ footer {
     font-family: sans-serif;
     background: linear-gradient(to bottom,#7fffd4,#7fffd4);
     color: black;
-    height: 5vh;
+    height: 30px;
     margin: 0;
     display: grid;
     place-items: center;
@@ -78,112 +76,12 @@ footer {
 }
 
 
-/* CSS GRID ELEMENTS STARTING HERE
- ********************************* */
-
-.wrapper {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-    grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
-    grid-template-areas: 
-        "pic con1 con1 space" 
-        "pic con2 con2 space" 
-        "pic con3 con3 space" 
-        "pic con4 con4 space"
-        "pic con5 con5 space";
-    align-self: center;
-    text-align: center;
-    grid-gap:0.2rem;
-}
-
-.side-image {
-    grid-area: pic;
-    grid-gap: 0rem;
-}
-
-.side-image > img {
-    width: 100%;
-    height: auto;
-}
-
-.subheader {
-    background: black;
-    color: white;
-    font-size: 1.3em;
-    align-self: center;
-    grid-area: con1;
-}
-
-.description {
-    background: black;
-    color: #7fffd4;
-    font-size: 1.2em;
-    align-items: center;
-    justify-items: center;
-    grid-area: con2;
-}
-
-.description2 {
-    background: black;
-    color: white;
-    font-size: 1.2em;
-    align-items: start;
-    grid-area: con3;
-}
-
-.description2 > button {
-    background-color: #7FFFD4;
-    color: black;
-    padding: 8px 12px;
-    height: 40px;
-    size:22px;
-. border-radius;
-. text-shadow;
-. transition(all .5 s);
-}
-
-.unitClass {
-    grid-area: con4;
-}
-
-.secondForm {
-    grid-area: con5;
-}
-
-.wrapper2 {
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 1fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    grid-template-areas:
-        "spc conte1 conte1 spc2"
-        "spc conte2 conte2 spc2";
-    align-self: center;
-    text-align: center;
-    grid-gap:0.2rem;
-}
-
-.resultField {
-    grid-area: conte1;
-}
-
-.lastQueries {
-    grid-area: conte2;
-}
-/* CSS GRID ELEMENTS ENDING HERE
- *********************************
-*/
-
-
-
 .errorMessages {
-  color:white;
-  background-color: red;
+  color:red;
+  background-color: black;
   font-size:14px;
-  width: 200px;
-  place-items: center;
+  justify-content: center;
   text-align: center;
-  left: 50%;
-  margin-left: 100px;
 
 }
 
@@ -194,7 +92,6 @@ form {
   margin: auto;
   font-size:22px;
   padding: 30px;
-  min-width: 220px;
   max-width: 540px;
   box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   border-radius: 3px;
@@ -208,10 +105,9 @@ form {
 . transition(all .5 s);
 }
 
-&:hover{
-   text-decoration: none;
-   background-color: lighten(#7FFFD4, 60%);
-   color: lighten(black, 10%);
+.btn:hover{
+text-decoration: none;
+filter: brightness(75%);
  }
 
 .inline-radio {
@@ -219,8 +115,6 @@ form {
   border-radius: 3px;
   overflow: hidden;
   border: 1px solid #b6b6b6;
-  min-width: 400px;
-  max-width:720px;
   align-self: center;
   place-content: center;
   place-items: center;
@@ -257,10 +151,13 @@ form {
   color: black;
 }
 
+input[type=text] {
+    margin: auto;
+}
 
 input[type=range] {
   -webkit-appearance: none;
-  width: 100%;
+  width: 90%;
   background: transparent;
 }
 
@@ -366,7 +263,171 @@ input[type=range]::-ms-fill-upper {
 input[type=range]:focus::-ms-fill-upper {
   background: #367ebd;
 }
-/* *****************************
+
+
+/* CSS GRID ELEMENTS STARTING HERE
+ ********************************* */
+
+.pageTitle {
+    font-size: 24px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+    grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
+    grid-template-areas:
+        "pic con1 con1 space"
+        "pic con2 con2 space"
+        "pic con3 con3 space"
+        "pic con4 con4 space"
+        "pic con5 con5 space";
+    align-self: center;
+    text-align: center;
+    grid-gap:0.2rem;
+}
+
+.side-image {
+    grid-area: pic;
+    grid-gap: 0rem;
+}
+
+.side-image > img {
+    width: 100%;
+    height: auto;
+}
+
+.advertisement {
+    grid-area: space;
+    display: none;
+}
+.advertisement > img {
+    width: 1fr;
+    height: auto;
+    margin-top: 30px;
+}
+
+
+.secondHeader {
+    height: 30vh;
+}
+
+.subheader {
+    background: black;
+    font-size: 28px;
+    color: white;
+    align-self: center;
+    grid-area: con1;
+}
+
+
+.description {
+    background: black;
+    color: #7fffd4;
+    font-size: 22px;
+    align-items: center;
+    justify-items: center;
+    grid-area: con2;
+}
+
+.description2 {
+    background: black;
+    color: white;
+    font-size: 24px;
+    align-items: start;
+    grid-area: con3;
+}
+
+.description2 > button {
+    background-color: #7FFFD4;
+    color: black;
+    padding: 8px 12px;
+    height: 40px;
+    size:22px;
+. border-radius;
+. text-shadow;
+. transition(all .5 s);
+}
+
+.unitClass {
+    grid-area: con4;
+}
+
+.secondForm {
+    grid-area: con5;
+}
+
+.wrapper2 {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-template-areas:
+        "spc conte1 conte1 spc2"
+        "spc conte2 conte2 spc2";
+    align-self: center;
+    text-align: center;
+    grid-gap:0.2rem;
+}
+
+.resultField {
+    grid-area: conte1;
+}
+
+.lastQueries {
+    grid-area: conte2;
+}
+
+.wrapper3 {
+    display: grid;
+    width: 100%;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+    grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr;
+    grid-template-areas:
+            "empty head3 head3 xxx"
+            "empty uncho uncho xxx"
+            "empty frm3 frm3 xxx"
+            "empty res3 res3 xxx"
+            "empty lasqu lasqu xxx";
+}
+
+.headline3 {
+    grid-area: head3;
+}
+
+
+.unitChoice {
+    grid-area: uncho;
+    display: flex;
+}
+
+.form3 {
+    grid-area: frm3;
+    display: flex;
+}
+
+.otherwayForm {
+    text-align: center;
+}
+
+.resultOw {
+    grid-area: res3;
+    text-align: center;
+}
+
+.lastQueriesOw {
+    grid-area: lasqu;
+    text-align: center;
+}
+
+/* CSS GRID ELEMENTS ENDING HERE
+ *********************************
+*/
+
+
+/*
+*****************************
 MOBILE DEVICES SETUP STARTS HERE
 ******************************** */
 
@@ -374,8 +435,8 @@ MOBILE DEVICES SETUP STARTS HERE
 @media only screen and (max-width: 600px) {
     .wrapper {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto auto auto auto;
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr 0.5r 1fr 1fr 2fr;
         align-items: center;
         grid-template-areas:
         "subheader"
@@ -386,42 +447,41 @@ MOBILE DEVICES SETUP STARTS HERE
 
     }
     header {
-        max-width: 100%;
-        max-height: 40px;
-        font-size: 1em;
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 50px;
+        align-items: center;
+    }
 
+    footer {
+        width: 100%;
+        max-height: 30px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 
     .pageTitle {
         color: black;
-        font-size: 12px;
-        place-items: center;
+        font-size: 14px;
     }
 
     .side-image {
-        grid-gap: 0rem;
-        grid-area: picture;
+        grid-gap: 0px;
+        display: none;
     }
 
     .side-image > img {
         display: none;
     }
 
-    /*.side-image > img:nth-of-type(1) {
-        grid-area: pic1;
-        max-width: 0.3fr;
-        height: auto;
+    .advertisement {
+        display: none;
     }
-    .side-image > img:nth-of-type(2) {
-    grid-area: pic2;
-    width: 0.3fr;
-    height: auto;
-    }*/
-
     .subheader {
         background: black;
         color: white;
-        font-size: 1.0em;
+        font-size: 20px;
         justify-items: center;
         grid-area: subheader;
         max-width: 100%;
@@ -430,7 +490,7 @@ MOBILE DEVICES SETUP STARTS HERE
     .description {
         background: black;
         color: #7fffd4;
-        font-size: 0.8em;
+        font-size: 24px;
         align-items: start;
         justify-items: center;
         grid-area: descr1;
@@ -439,18 +499,21 @@ MOBILE DEVICES SETUP STARTS HERE
     .description2 {
         background: black;
         color: white;
-        font-size: 0.8em;
+        font-size: 24px;
         align-items: end;
         grid-area: descr2;
         max-width: 100%;
     }
     .unitClass {
         grid-area: form1;
-        max-width: 75%;
+        max-width: 100%;
     }
     .secondForm {
         grid-area: form2;
         max-width: 100%;
+    }
+    .secondHeader {
+        height: 10vh;
     }
 
     .wrapper2 {
@@ -474,31 +537,106 @@ MOBILE DEVICES SETUP STARTS HERE
     }
 
 
+    .wrapper3 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas:
+        "head3M"
+        "unchoM"
+        "frm3M"
+        "res3M"
+        "lasquM";
+        align-self: center;
+        text-align: center;
+        grid-gap:0.2rem;
+    }
 
+    .headline3 {
+        grid-area: head3M;
+    }
+
+
+    .unitChoice {
+        grid-area: unchoM;
+        display: flex;
+    }
+
+    .form3 {
+        grid-area: frm3M;
+        display: flex;
+    }
+
+    .otherwayForm {
+        text-align: center;
+    }
+
+    .resultOw {
+        grid-area: res3M;
+        text-align: center;
+    }
+
+    .lastQueriesOw {
+        grid-area: lasquM;
+        text-align: center;
+    }
 
 
     form {
         background: black;
         width: 100%;
-        display: block;
+        display: inline-block;
         margin: auto;
-        font-size:22px;
-        padding: 30px;
-        max-width: 75%;
+        padding: 10px;
         box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
         border-radius: 3px;
     }
 
     .inline-radio {
         display: flex;
-        border-radius: 3px;
+        border-radius: 1px;
         overflow: hidden;
         border: 1px solid #b6b6b6;
-        max-width: 75%;
+        width: 100%;
         align-self: center;
         place-content: center;
         place-items: center;
     }
+
+    .inline-radio div {
+        position: relative;
+        flex: 1;
+    }
+    .inline-radio input {
+        width: 100%;
+        height: 30px;
+        opacity: 0;
+    }
+    .inline-radio label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #b6b6b6;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        pointer-events: none;
+        border-right: 1px solid #b6b6b6;
+    }
+    .inline-radio div:last-child label {
+        border-right: 0;
+    }
+    .inline-radio input:checked + label {
+        background: #7FFFD4;
+        font-weight: 300;
+        color: black;
+    }
+
+
+
 
     input[type=range]::-webkit-slider-thumb {
         -webkit-appearance: none;
