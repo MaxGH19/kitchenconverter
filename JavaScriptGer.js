@@ -295,7 +295,7 @@ function convertToTablespoons () {
 
   else {
     document.getElementById("resultSecond").value = resultTbl;
-    toUnit = "Tablespoons";
+    toUnit = "Esslöffel";
     jumpToResult();
     querySecondGer();
     setListTblGer();
@@ -318,7 +318,7 @@ function convertToTeaspoons () {
 
   else if (numberIngr > 1) {
     document.getElementById("resultSecond").value = resultTea;
-    toUnit = "Teaspoons";
+    toUnit = "Teelöffel";
     jumpToResult();
     querySecondGer();
     setListTeaGer();
