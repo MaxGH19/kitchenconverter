@@ -16,9 +16,14 @@ select {
     color: black;
 }
 
-.germanyFlag {
-    justify-items: center;
+.flags {
+    justify-items: start;
+    border: 1px black;
     text-align: center;
+    width: 100%;
+    background-color: #7fffd4;
+    display: inline-block;
+    padding: 10px;
 }
 
 .input-grams {
@@ -56,11 +61,16 @@ header {
     background: #7fffd4;
     color: black;
     height: 90px;
+    margin-top: -5px;
     display: inline-grid;
-    grid-template-columns: 10% 90%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: auto;
-    justify-items: center;
+    justify-items: start;
     width: 100%;
+}
+.space {
+    height: 30px;
+    background: #7fffd4;
 }
 
 footer {
@@ -100,15 +110,27 @@ form {
   background-color: #7FFFD4;
   color: black;
   padding: 8px 12px;
+    margin: 5px;
 . border-radius;
 . text-shadow;
 . transition(all .5 s);
 }
 
 .btn:hover{
-text-decoration: none;
-filter: brightness(75%);
+    text-decoration: none;
+    filter: brightness(75%);
+    transform: scale(1.2);
  }
+
+.resultFieldInput {
+    width: 150px;
+    height:40px;
+    text-align:center;
+    font-size:30px;
+    background-color:black;
+    color:whitesmoke;
+}
+
 
 .inline-radio {
   display: flex;
@@ -324,11 +346,20 @@ input[type=range]:focus::-ms-fill-upper {
 .description {
     background: black;
     color: #7fffd4;
+    border: 3px solid #fff;
     font-size: 22px;
+    margin-left: -2px;
     align-items: center;
     justify-items: center;
     grid-area: con2;
 }
+
+.description:hover {
+    border: 3px dotted black;
+    color: black;
+    background: #7fffd4;
+}
+
 
 .description2 {
     background: black;
@@ -418,6 +449,11 @@ input[type=range]:focus::-ms-fill-upper {
 
 .lastQueriesOw {
     grid-area: lasqu;
+    padding: 5px;
+    text-align: center;
+}
+
+.lastQueriesOw > ul {
     text-align: center;
 }
 
