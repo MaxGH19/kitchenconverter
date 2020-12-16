@@ -52,30 +52,6 @@ function convertNumbers() {
   }
 }
 
-function convertGramsGer() {
-  numberOne = parseInt(document.getElementById("ingrList").value);
-
-  result = numberOne * y / conv;
-
-  result = result.toFixed(2);
-
-  if (numberOne < 0.1) {
-    document.getElementById("errorIng").innerHTML = "Bitte wähle eine Zutat aus ";
-  }
-
-  if (y < 0.1) {
-    document.getElementById("errorAmt").innerHTML = "Bitte wähle eine Menge ";
-  }
-
-  if (result > 0.1) {
-    document.getElementById("result").value = result + " g";
-    document.getElementById("errorIng").innerHTML = "";
-    document.getElementById("errorAmt").innerHTML = "";
-    queryGerman();
-    setListGerman();
-    jumpToBottom()
-  }
-}
 
 var numberTwo = 0;
 var resultOz = 0;
@@ -107,32 +83,6 @@ function convertToOunces () {
   }
 }
 
-function convertToOuncesGer () {
-
-  numberTwo = parseInt(document.getElementById("ingrList").value);
-
-
-  resultOz = (numberTwo / 28.3495) * y / conv;
-
-  resultOz = resultOz.toFixed(2);
-
-  if (numberTwo < 0.1) {
-    document.getElementById("errorIng").innerHTML = "Bitte wähle eine Zutat aus ";
-  }
-
-  if (y < 0.1) {
-    document.getElementById("errorAmt").innerHTML = "Bitte wähle eine Menge ";
-  }
-
-  if (resultOz > 0.1) {
-    document.getElementById("result").value = resultOz + " oz";
-    document.getElementById("errorIng").innerHTML = "";
-    document.getElementById("errorAmt").innerHTML = "";
-    queryGerman();
-    setListGerman();
-    jumpToBottom()
-  }
-}
 
 var e;
 
@@ -238,16 +188,11 @@ var z = undefined;
 
 
 var lastQuery = "";
-var queryData = "", queryDataGer;
+var queryData = "",
 
 function query() {
   queryData = [userInput, unit, ingrTextLower];
     document.getElementById("sentence").innerHTML = queryData[0] + " " + queryData[1] + " of " + queryData[2] + " is equal to:";
-}
-
-function queryGerman () {
-  queryDataGer = [userInput, unit, ingrText];
-  document.getElementById("sentence").innerHTML = queryDataGer[0] + " " + queryDataGer[1] + " " +queryDataGer[2] + " sind umgerechnet:";
 }
 
 var entry = "";
@@ -261,17 +206,6 @@ function setList() {
     entry.appendChild(document.createTextNode(lastQuery));
     document.getElementById('queriesList').appendChild(entry);
 
-}
-
-var resultGer = 0;
-
-function setListGerman() {
-  resultGer = document.getElementById("result").value;
-  entry = document.createElement('li');
-  queryData = [userInput, unit, ingrText];
-  lastQuery = queryData[0] + " " + queryData[1] + " " + queryData[2] + " = " + resultGer;
-  entry.appendChild(document.createTextNode(lastQuery));
-  document.getElementById('queriesList').appendChild(entry);
 }
 
 /*
@@ -405,14 +339,6 @@ function querySecond() {
   document.getElementById("sentenceThird").innerHTML = toUnit;
 }
 
-function querySecondGer() {
-  queryDataSecond = [inputGrams, unitSecond, ingrTextSecond];
-  document.getElementById("sentenceSecond").innerHTML = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " sind umgerechnet:";
-  document.getElementById("sentenceThird").innerHTML = toUnit;
-}
-
-
-
 var entryOw = "";
 var resultOw;
 var lastQueryOw;
@@ -444,30 +370,5 @@ function setListTea() {
   document.getElementById('queriesListOw').appendChild(entryOw);
 }
 
-function setListCupsGer() {
-  resultOw = document.getElementById("resultSecond").value;
-  entryOw = document.createElement('li');
-  queryDataSecond = [inputGrams, unitSecond, ingrTextSecond];
-  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " = " + resultOw + " Cups";
-  entryOw.appendChild(document.createTextNode(lastQueryOw));
-  document.getElementById('queriesListOw').appendChild(entryOw);
-}
 
-function setListTblGer() {
-  resultOw = document.getElementById("resultSecond").value;
-  entryOw = document.createElement('li');
-  queryDataSecond = [inputGrams, unitSecond, ingrTextSecond];
-  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " = " + resultOw + " Esslöffel";
-  entryOw.appendChild(document.createTextNode(lastQueryOw));
-  document.getElementById('queriesListOw').appendChild(entryOw);
-}
-
-function setListTeaGer() {
-  resultOw = document.getElementById("resultSecond").value;
-  entryOw = document.createElement('li');
-  queryDataSecond = [inputGrams, unitSecond, ingrTextLowerSecond];
-  lastQueryOw = queryDataSecond[0] + " " + queryDataSecond[1] + " " + queryDataSecond[2] + " = " + resultOw + " Teelöffel";
-  entryOw.appendChild(document.createTextNode(lastQueryOw));
-  document.getElementById('queriesListOw').appendChild(entryOw);
-}
 

@@ -26,6 +26,11 @@ select {
     padding: 10px;
 }
 
+.flags > img {
+    width= 30px;
+    height= 20px;
+}
+
 .input-grams {
   height: 28px;
   width: 320px;
@@ -60,12 +65,12 @@ header {
     font-family: sans-serif;
     background: #7fffd4;
     color: black;
-    height: 90px;
+    height: 50px;
     margin-top: -5px;
-    display: inline-grid;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: auto;
-    justify-items: start;
+    padding-bottom: 15px;
+    display: block;
+    justify-items: center;
+    text-align: center;
     width: 100%;
 }
 .space {
@@ -290,172 +295,365 @@ input[type=range]:focus::-ms-fill-upper {
 /* CSS GRID ELEMENTS STARTING HERE
  ********************************* */
 
-.pageTitle {
-    font-size: 24px;
-}
+@media only screen and (min-width: 600px) and (max-width: 1280px) {
 
-.wrapper {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-    grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
-    grid-template-areas:
+    .pageTitle {
+        font-size: 24px;
+    }
+
+    header {
+        height: 90px;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
+        grid-template-areas:
         "pic con1 con1 space"
         "pic con2 con2 space"
         "pic con3 con3 space"
         "pic con4 con4 space"
         "pic con5 con5 space";
-    align-self: center;
-    text-align: center;
-    grid-gap:0.2rem;
-}
+        align-self: center;
+        text-align: center;
+        grid-gap: 0.2rem;
+    }
 
-.side-image {
-    grid-area: pic;
-    grid-gap: 0rem;
-}
+    .side-image {
+        grid-area: pic;
+        grid-gap: 0rem;
+    }
 
-.side-image > img {
-    width: 100%;
-    height: auto;
-}
+    .side-image > img {
+        width: 100%;
+        height: auto;
+    }
 
-.advertisement {
-    grid-area: space;
-    display: none;
-}
-.advertisement > img {
-    width: 1fr;
-    height: auto;
-    margin-top: 30px;
-}
+    .advertisement {
+        grid-area: space;
+        display: none;
+    }
 
-
-.secondHeader {
-    height: 30vh;
-}
-
-.subheader {
-    background: black;
-    font-size: 28px;
-    color: white;
-    align-self: center;
-    grid-area: con1;
-}
+    .advertisement > img {
+        width: 1fr;
+        height: auto;
+        margin-top: 30px;
+    }
 
 
-.description {
-    background: black;
-    color: #7fffd4;
-    border: 3px solid #fff;
-    font-size: 22px;
-    margin-left: -2px;
-    align-items: center;
-    justify-items: center;
-    grid-area: con2;
-}
+    .secondHeader {
+        height: 50px;
+    }
 
-.description:hover {
-    border: 3px dotted black;
-    color: black;
-    background: #7fffd4;
-}
+    .subheader {
+        background: black;
+        font-size: 28px;
+        color: white;
+        align-self: center;
+        grid-area: con1;
+    }
 
 
-.description2 {
-    background: black;
-    color: white;
-    font-size: 24px;
-    align-items: start;
-    grid-area: con3;
-}
+    .description {
+        background: black;
+        color: #7fffd4;
+        border: 3px solid #fff;
+        font-size: 22px;
+        margin-left: -2px;
+        align-items: center;
+        justify-items: center;
+        grid-area: con2;
+    }
 
-.description2 > button {
-    background-color: #7FFFD4;
-    color: black;
-    padding: 8px 12px;
-    height: 40px;
-    size:22px;
-. border-radius;
-. text-shadow;
-. transition(all .5 s);
-}
+    .description:hover {
+        border: 3px dotted black;
+        color: black;
+        background: #7fffd4;
+    }
 
-.unitClass {
-    grid-area: con4;
-}
 
-.secondForm {
-    grid-area: con5;
-}
+    .description2 {
+        background: black;
+        color: white;
+        font-size: 24px;
+        align-items: start;
+        grid-area: con3;
+    }
 
-.wrapper2 {
-    display: grid;
-    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-    grid-template-rows: 0.5fr 0.5fr;
-    grid-template-areas:
+    .description2 > button {
+        background-color: #7FFFD4;
+        color: black;
+        padding: 8px 12px;
+        height: 40px;
+        size: 22px;
+    . border-radius;
+    . text-shadow;
+    . transition(all .5 s);
+    }
+
+    .unitClass {
+        grid-area: con4;
+    }
+
+    .secondForm {
+        grid-area: con5;
+    }
+
+    .wrapper2 {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas:
         "spc conte1 conte1 spc2"
         "spc conte2 conte2 spc2";
-    align-self: center;
-    text-align: center;
-    grid-gap:0.2rem;
-}
+        align-self: center;
+        text-align: center;
+        grid-gap: 0.2rem;
+    }
 
-.resultField {
-    grid-area: conte1;
-}
+    .resultField {
+        grid-area: conte1;
+    }
 
-.lastQueries {
-    grid-area: conte2;
-}
+    .lastQueries {
+        grid-area: conte2;
+    }
 
-.wrapper3 {
-    display: grid;
-    width: 100%;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
-    grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr;
-    grid-template-areas:
+    .wrapper3 {
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr;
+        grid-template-areas:
             "empty head3 head3 xxx"
             "empty uncho uncho xxx"
             "empty frm3 frm3 xxx"
             "empty res3 res3 xxx"
             "empty lasqu lasqu xxx";
+    }
+
+    .headline3 {
+        grid-area: head3;
+    }
+
+
+    .unitChoice {
+        grid-area: uncho;
+        display: flex;
+    }
+
+    .form3 {
+        grid-area: frm3;
+        display: flex;
+    }
+
+    .otherwayForm {
+        text-align: center;
+    }
+
+    .resultOw {
+        grid-area: res3;
+        text-align: center;
+    }
+
+    .lastQueriesOw {
+        grid-area: lasqu;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .lastQueriesOw > ul {
+        text-align: center;
+    }
 }
 
-.headline3 {
-    grid-area: head3;
-}
 
 
-.unitChoice {
-    grid-area: uncho;
-    display: flex;
+
+@media only screen and (min-width: 1281px) {
+
+    .pageTitle {
+        font-size: 38px;
+        margin-top: -20px;
+    }
+
+    header {
+        height: 120px;
+    }
+
+    .space {
+        height: 60px;
+
+    }
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-rows: 0.5fr 0.25fr 0.25fr 0.1fr 0.25fr;
+        grid-template-areas:
+        "pic con1 con1 space"
+        "pic con2 con2 space"
+        "pic con3 con3 space"
+        "pic con4 con4 space"
+        "pic con5 con5 space";
+        align-self: center;
+        text-align: center;
+        grid-gap: 0.2rem;
+    }
+
+    .side-image {
+        grid-area: pic;
+        grid-gap: 0rem;
+    }
+
+    .side-image > img {
+        width: 100%;
+        height: auto;
+    }
+
+    .advertisement {
+        grid-area: space;
+        display: none;
+    }
+
+    .advertisement > img {
+        width: 1fr;
+        height: auto;
+        margin-top: 30px;
+    }
+
+
+    .secondHeader {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    .subheader {
+        background: black;
+        font-size: 38px;
+        color: white;
+        align-self: center;
+        grid-area: con1;
+    }
+
+
+    .description {
+        background: black;
+        color: #7fffd4;
+        border: 3px solid #fff;
+        font-size: 34px;
+        margin-left: -2px;
+        align-items: center;
+        justify-items: center;
+        grid-area: con2;
+    }
+
+    .description:hover {
+        border: 3px dotted black;
+        color: black;
+        background: #7fffd4;
+    }
+
+
+    .description2 {
+        background: black;
+        color: white;
+        font-size: 32px;
+        align-items: start;
+        grid-area: con3;
+    }
+
+    .description2 > button {
+        background-color: #7FFFD4;
+        color: black;
+        padding: 8px 12px;
+        height: 60px;
+        size: 32px;
+    . border-radius;
+    . text-shadow;
+    . transition(all .5 s);
+    }
+
+    .unitClass {
+        grid-area: con4;
+    }
+
+    .secondForm {
+        grid-area: con5;
+    }
+
+    .wrapper2 {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas:
+        "spc conte1 conte1 spc2"
+        "spc conte2 conte2 spc2";
+        align-self: center;
+        text-align: center;
+        grid-gap: 0.2rem;
+    }
+
+    .resultField {
+        grid-area: conte1;
+    }
+
+    .lastQueries {
+        grid-area: conte2;
+    }
+
+    .wrapper3 {
+        display: grid;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
+        grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr;
+        grid-template-areas:
+            "empty head3 head3 xxx"
+            "empty uncho uncho xxx"
+            "empty frm3 frm3 xxx"
+            "empty res3 res3 xxx"
+            "empty lasqu lasqu xxx";
+    }
+
+    .headline3 {
+        grid-area: head3;
+    }
+
+
+    .unitChoice {
+        grid-area: uncho;
+        display: flex;
+    }
+
+    .form3 {
+        grid-area: frm3;
+        display: flex;
+    }
+
+    .otherwayForm {
+        text-align: center;
+    }
+
+    .resultOw {
+        grid-area: res3;
+        text-align: center;
+    }
+
+    .lastQueriesOw {
+        grid-area: lasqu;
+        padding: 5px;
+        text-align: center;
+    }
+
+    .lastQueriesOw > ul {
+        text-align: center;
+    }
 }
 
-.form3 {
-    grid-area: frm3;
-    display: flex;
-}
-
-.otherwayForm {
-    text-align: center;
-}
-
-.resultOw {
-    grid-area: res3;
-    text-align: center;
-}
-
-.lastQueriesOw {
-    grid-area: lasqu;
-    padding: 5px;
-    text-align: center;
-}
-
-.lastQueriesOw > ul {
-    text-align: center;
-}
 
 /* CSS GRID ELEMENTS ENDING HERE
  *********************************
