@@ -21,15 +21,58 @@ select {
     border: 1px black;
     text-align: center;
     width: 100%;
-    background-color: #7fffd4;
+    margin-bottom: -10px;
     display: inline-block;
     padding: 10px;
 }
 
-.flags > img {
-    width= 30px;
-    height= 20px;
+.flags img {
+    width: 35px;
+    height: 22px;
 }
+
+.flags img:hover {
+    box-shadow: 0 0 5px 3px mintcream;
+}
+
+.description {
+    background: black;
+    color: #7fffd4;
+    border: 3px solid #fff;
+    font-size: 22px;
+    margin-left: 2px;
+    margin-right: 2px;
+    align-items: center;
+    justify-items: center;
+    grid-area: con2;
+}
+
+.description:hover {
+    border: 3px dotted black;
+    color: black;
+    background: #7fffd4;
+}
+
+
+.description2 {
+    background: black;
+    color: white;
+    font-size: 24px;
+    align-items: start;
+    grid-area: con3;
+}
+
+.description2 > button {
+    background-color: #7FFFD4;
+    color: black;
+    padding: 8px 12px;
+    height: 40px;
+    size: 22px;
+. border-radius;
+. text-shadow;
+. transition(all .5 s);
+}
+
 
 .input-grams {
   height: 28px;
@@ -73,6 +116,7 @@ header {
     text-align: center;
     width: 100%;
 }
+
 .space {
     height: 30px;
     background: #7fffd4;
@@ -89,7 +133,6 @@ footer {
     text-align: center;
     width: 100%;
 }
-
 
 .errorMessages {
   color:red;
@@ -360,7 +403,8 @@ input[type=range]:focus::-ms-fill-upper {
         color: #7fffd4;
         border: 3px solid #fff;
         font-size: 22px;
-        margin-left: -2px;
+        margin-left: 2px;
+        margin-right: 2px;
         align-items: center;
         justify-items: center;
         grid-area: con2;
@@ -484,6 +528,11 @@ input[type=range]:focus::-ms-fill-upper {
         height: 120px;
     }
 
+    .flags img {
+        width: 40px;
+        height: 27px;
+    }
+
     .space {
         height: 60px;
 
@@ -569,7 +618,7 @@ input[type=range]:focus::-ms-fill-upper {
         background-color: #7FFFD4;
         color: black;
         padding: 8px 12px;
-        height: 60px;
+        height: 40px;
         size: 32px;
     . border-radius;
     . text-shadow;

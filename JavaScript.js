@@ -83,7 +83,6 @@ function convertToOunces () {
   }
 }
 
-
 var e;
 
 function resetButton() {
@@ -188,7 +187,7 @@ var z = undefined;
 
 
 var lastQuery = "";
-var queryData = "",
+var queryData = "";
 
 function query() {
   queryData = [userInput, unit, ingrTextLower];
@@ -234,7 +233,7 @@ function displayGramsOunces() {
 }
 
 function resetButtonSecond() {
-  document.getElementById("ingrListSecond").value = "--Select--";
+  document.getElementById("numberInputSecond").reset();
   document.getElementById("inputFieldGrams").value = "";
   document.getElementById("resultSecond").value = "";
   document.getElementById("sentenceSecond").innerHTML = "";
@@ -269,7 +268,7 @@ function convertToCups () {
   resultCups = (inputGrams * convSecond) / numberIngr;
   resultCups = resultCups.toFixed(2);
 
-  if (numberIngr === 0) {
+  if (numberIngr <0.1) {
     document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient";
     location.href = "#";
     location.href = "#ingrListSecond";
@@ -293,7 +292,7 @@ function convertToTablespoons () {
   resultTbl = ((inputGrams * convSecond) * 16) / numberIngr;
   resultTbl = resultTbl.toFixed(2);
 
-  if (numberIngr === 0) {
+  if (numberIngr < 0.1) {
     document.getElementById("errorIngSecond").innerHTML = "Please select an ingredient";
     location.href = "#";
     location.href = "#ingrListSecond";
@@ -331,6 +330,11 @@ function convertToTeaspoons () {
   }
 }
 
+
+var resultTbl = 0;
+
+var resultTea = 0;
+
 var queryDataSecond;
 
 function querySecond() {
@@ -338,6 +342,7 @@ function querySecond() {
   document.getElementById("sentenceSecond").innerHTML = queryDataSecond[0] + " " + queryDataSecond[1] + " of " + queryDataSecond[2] + " is equal to:";
   document.getElementById("sentenceThird").innerHTML = toUnit;
 }
+
 
 var entryOw = "";
 var resultOw;
@@ -369,6 +374,5 @@ function setListTea() {
   entryOw.appendChild(document.createTextNode(lastQueryOw));
   document.getElementById('queriesListOw').appendChild(entryOw);
 }
-
 
 
