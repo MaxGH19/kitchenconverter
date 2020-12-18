@@ -202,6 +202,18 @@ function setListGerman() {
   document.getElementById('queriesList').appendChild(entry);
 }
 
+var listToClearGer = "";
+
+function clearListGer() {
+  listToClearGer = document.getElementById("queriesList")
+  listToClearGer.innerHTML = "";
+}
+
+function clearSecondListGer() {
+  listToClearGer = document.getElementById("queriesListOw")
+  listToClearGer.innerHTML = "";
+}
+
 /*
 ************ SECOND PART ("otherway") COMES HERE SEPARATED **********
 /////////////////////////////////////////////////////// */

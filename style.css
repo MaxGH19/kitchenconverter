@@ -170,6 +170,18 @@ form {
     transform: scale(1.2);
  }
 
+.btnList {
+    background-color: #7FFFD4;
+    color: black;
+    padding: 4px 6px;
+    margin: 3px;
+    font-size: 10px;
+. border-radius;
+. text-shadow;
+. transition(all .5 s);
+}
+
+
 .resultFieldInput {
     width: 150px;
     height:40px;

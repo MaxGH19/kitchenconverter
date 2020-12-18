@@ -70,7 +70,7 @@
           <div id="buttons">
           <input class="btn" onclick="convertNumbers(),setIngrText()" type="button" value="Convert to grams">
           <input class="btn" onclick="convertToOunces(),setIngrText()" type="button" value="Convert to oz">
-              <input class="btn" onclick="resetButton(),jumpToTop()" type="button" value="Reset">
+              <input class="btn" onclick="resetButton()" type="button" value="Reset">
           </div>
       </form>
   </div>
@@ -85,7 +85,7 @@
   <script  src="JavaScript.js"></script>
   <div id="bottom" class="lastQueries">
       <p>Your last queries:</p>
-      <p style="color:#7fffd4; font-size:10px">Refresh the page to clear the list</p>
+      <button class="btnList" onclick="clearList()">Clear List</button>
       <br>
       <ul id="queriesList" style="list-style-type:none"></ul>
   </div>
@@ -147,7 +147,7 @@
     <script  src="JavaScript.js"></script>
     <div class="lastQueriesOw">
         <p>Your last queries:</p>
-        <p style="color:#7fffd4; font-size:10px">Refresh the page to clear the list</p>
+        <button class="btnList" onclick="clearSecondList()">Clear List</button>
         <br>
         <ul id="queriesListOw" style="list-style-type:none"></ul>
     </div>
