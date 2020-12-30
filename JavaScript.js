@@ -206,6 +206,17 @@ function setList() {
     document.getElementById('queriesList').appendChild(entry);
 
 }
+var listToClear = "";
+
+function clearList() {
+  listToClear = document.getElementById("queriesList")
+  listToClear.innerHTML = "";
+}
+
+function clearSecondList() {
+  listToClear = document.getElementById("queriesListOw")
+  listToClear.innerHTML = "";
+}
 
 /*
 ************ SECOND PART ("otherway") COMES HERE SEPARATED **********

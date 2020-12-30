@@ -49,18 +49,18 @@
   <div class="secondForm">
       <form id="numberInput">
           Select an Ingredient<br> <select id="ingrList" onchange="setIngrText()">
-              <option style="font-size:16px;color:grey" value="0">--Select--</option>
-              <option style="font-size:16px" value="130">Flour</option>
-              <option style="font-size:16px" value="200">Sugar</option>
-              <option style="font-size:16px" value="224">Oil</option>
-              <option style="font-size:16px" value="100">Almonds</option>
-              <option style="font-size:16px" value="225">Butter</option>
-              <option style="font-size:16px" value="128">Seeds</option>
-              <option style="font-size:16px" value="240">Liquids</option>
-              <option style="font-size:16px" value="340">Honey</option>
-              <option style="font-size:16px" value="240">Cream/Yoghurt</option>
-              <option style="font-size:16px" value="180">Salt</option>
-          </select>
+    <option style="font-size:16px; color:gray" value="0">--Please Select--</option>
+    <option style="font-size:16px" value="100">Almonds</option>
+    <option style="font-size:16px" value="225">Butter</option>
+    <option style="font-size:16px" value="240">Cream/Yoghurt</option>
+    <option style="font-size:16px" value="130">Flour</option>
+    <option style="font-size:16px" value="340">Honey</option>
+    <option style="font-size:16px" value="240">Liquids</option>
+    <option style="font-size:16px" value="224">Oil</option>
+    <option style="font-size:16px" value="180">Salt</option>
+    <option style="font-size:16px" value="128">Seeds</option>
+    <option style="font-size:16px" value="200">Sugar</option>
+</select>
 
           <p id="errorIng" style="color:red; font-size:14px"></p><br>
 
@@ -97,6 +97,9 @@
     <div class="headline3">
         <h1>From Grams to Cups & More</h1>
     </div>
+    <div class="sideImageBottom">
+        <img src="https://cdn.pixabay.com/photo/2020/11/30/14/38/crinkles-5791082__480.jpg" />
+    </div>
     <div id="GramsOuncesChoice" class="unitChoice">
         <form>
             <group id="groupChoiceGrams" class="inline-radio" onchange="displayGramsOunces()">
@@ -108,18 +111,18 @@
     <div class="form3">
         <form id="numberInputSecond" class="otherwayForm">
             Select an Ingredient<br>
-            <select id="ingrListSecond" onchange="setIngrTextSecond()">
-            <option style="font-size:16px;color:grey" value="0">--Select--</option>
-            <option style="font-size:16px" value="130">Flour</option>
-            <option style="font-size:16px" value="200">Sugar</option>
-            <option style="font-size:16px" value="240">Oil</option>
+        <select id="ingrListSecond" onchange="setIngrTextSecond()">
+            <option style="font-size:16px; color:gray" value="0">--Please Select--</option>
             <option style="font-size:16px" value="100">Almonds</option>
             <option style="font-size:16px" value="225">Butter</option>
-            <option style="font-size:16px" value="128">Seeds</option>
-            <option style="font-size:16px" value="240">Liquids</option>
-            <option style="font-size:16px" value="340">Honey</option>
             <option style="font-size:16px" value="240">Cream/Yoghurt</option>
+            <option style="font-size:16px" value="130">Flour</option>
+            <option style="font-size:16px" value="340">Honey</option>
+            <option style="font-size:16px" value="240">Liquids</option>
+            <option style="font-size:16px" value="224">Oil</option>
             <option style="font-size:16px" value="180">Salt</option>
+            <option style="font-size:16px" value="128">Seeds</option>
+            <option style="font-size:16px" value="200">Sugar</option>
         </select>
 
             <p class="errorMessages" id="errorIngSecond"></p><br>
@@ -129,7 +132,7 @@
 
             <input class="btn" onclick="convertToCups(),setIngrTextSecond()" type="button" value="Convert to cups">
             <input class="btn" onclick="convertToTablespoons(),setIngrTextSecond()" type="button" value="Convert to tablespoons">
-            <input class="btn" onclick= "convertToTeaspoons(), setIngrTextSecond()" type="button" value="Convert to teaspoons"><br>
+            <input class="btn" onclick="convertToTeaspoons(), setIngrTextSecond()" type="button" value="Convert to teaspoons"><br>
             <input class="btn" onclick="resetButtonSecond()" type="button" value="Reset">
         </form>
     </div><br>
@@ -141,7 +144,7 @@
     <br>
 
     <!-- partial -->
-    <script  src="JavaScript.js"></script>
+    <script src="JavaScript.js"></script>
     <div class="lastQueriesOw">
         <p>Your last queries:</p>
         <p style="color:#7fffd4; font-size:10px">Refresh the page to clear the list</p>
@@ -149,6 +152,7 @@
         <ul id="queriesListOw" style="list-style-type:none"></ul>
     </div>
 </div>
+
 </body>
 <footer>
     <a href="#startpage" style="color:black">Jump to top</a>

@@ -472,8 +472,8 @@ input[type=range]:focus::-ms-fill-upper {
         grid-template-columns: 1.5fr 2fr 2fr 1.5fr;
         grid-template-rows: 0.5fr 0.5fr 2fr 1fr 1fr;
         grid-template-areas:
-            "empty head3 head3 xxx"
-            "empty uncho uncho xxx"
+            "empty head3 head3 zzz"
+            "empty uncho uncho zzz"
             "empty frm3 frm3 xxx"
             "empty res3 res3 xxx"
             "empty lasqu lasqu xxx";
@@ -482,7 +482,6 @@ input[type=range]:focus::-ms-fill-upper {
     .headline3 {
         grid-area: head3;
     }
-
 
     .unitChoice {
         grid-area: uncho;
@@ -512,7 +511,19 @@ input[type=range]:focus::-ms-fill-upper {
     .lastQueriesOw > ul {
         text-align: center;
     }
+
+    .sideImageBottom {
+        grid-area: xxx;
+        grid-gap: 0rem;
+    }
+
+    .sideImageBottom > img {
+        width: 100%;
+        height: auto;
+        }
 }
+
+
 
 
 
@@ -701,6 +712,16 @@ input[type=range]:focus::-ms-fill-upper {
     .lastQueriesOw > ul {
         text-align: center;
     }
+
+    .sideImageBottom {
+        grid-area: xxx;
+        grid-gap: 0rem;
+    }
+
+    .sideImageBottom > img {
+        width: 100%;
+        height: auto;
+        }
 }
 
 
@@ -719,8 +740,10 @@ MOBILE DEVICES SETUP STARTS HERE
     .wrapper {
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 1fr 0.5r 1fr 1fr 2fr;
+        grid-template-rows: 1fr 0.5fr 1fr 1fr 2fr;
         align-items: center;
+        align-self: center;
+        text-align: center;
         grid-template-areas:
         "subheader"
         "descr1"
