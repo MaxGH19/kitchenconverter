@@ -49,18 +49,18 @@
   <div class="secondForm">
       <form id="numberInput">
           Wähle eine Zutat<br> <select id="ingrList" onchange="setIngrText()">
-          <option style="font-size:16px;color:grey" value="0">--Bitte wählen--</option>
-          <option style="font-size:16px" value="130">Mehl</option>
-          <option style="font-size:16px" value="200">Zucker</option>
-          <option style="font-size:16px" value="224">Öl</option>
-          <option style="font-size:16px" value="100">Mandeln</option>
-          <option style="font-size:16px" value="225">Butter</option>
-          <option style="font-size:16px" value="128">Saaten</option>
-          <option style="font-size:16px" value="240">Flüssigkeiten</option>
-          <option style="font-size:16px" value="340">Honig</option>
-          <option style="font-size:16px" value="240">Sahne / Joghurt</option>
-          <option style="font-size:16px" value="180">Salz</option>
-          </select>
+    <option style="font-size:16px;color:grey" value="0">--Bitte wählen--</option>
+    <option style="font-size:16px" value="225">Butter</option>
+    <option style="font-size:16px" value="240">Flüssigkeiten</option>
+    <option style="font-size:16px" value="340">Honig</option>
+    <option style="font-size:16px" value="130">Mehl</option>
+    <option style="font-size:16px" value="100">Mandeln (gehackt)</option>
+    <option style="font-size:16px" value="224">Öl</option>
+    <option style="font-size:16px" value="128">Saaten</option>
+    <option style="font-size:16px" value="240">Sahne / Joghurt</option>
+    <option style="font-size:16px" value="180">Salz</option>
+    <option style="font-size:16px" value="200">Zucker</option>
+</select>
 
           <p id="errorIng" style="color:red; font-size:14px"></p><br>
 
@@ -84,7 +84,7 @@
   <script  src="JavaScriptGer.js"></script>
   <div id="bottom" class="lastQueries">
       <p>Deine letzten Umrechnungen:</p>
-      <button class="btnList" onclick="clearListGer()">Liste leeren</button>
+      <p style="color:#7fffd4; font-size:10px">Lade die Seite neu, um die Liste zu leeren</p>
       <br>
       <ul id="queriesList" style="list-style-type:none"></ul>
   </div>
@@ -95,62 +95,65 @@
 <br>
 <header class="secondHeader"></header>
 <section>
-<div id="bottomWrapper" class="wrapper3">
-    <div class="headline3">
-        <h1>Von Gramm in Cups & mehr</h1>
-    </div>
-    <div id="GramsOuncesChoice" class="unitChoice">
-        <form>
-            <group id="groupChoiceGrams" class="inline-radio" onchange="displayGramsOunces()">
-                <div id="SetGrams"><input type="radio" name="units2" value="Grams" checked><label>Gramm</label></div>
-                <div id="SetOunces"><input type="radio" name="units2" value="Ounces"><label>Unzen (oz)</label></div>
-            </group>
-        </form>
-    </div>
-    <div class="form3">
-        <form id="numberInputSecond" class="otherwayForm">
-            Wähle eine Zutat<br>
-            <select id="ingrListSecond" onchange="setIngrTextSecond()">
-                <option style="font-size:16px;color:grey" value="0">--Bitte wählen--</option>
-                <option style="font-size:16px" value="130">Mehl</option>
-                <option style="font-size:16px" value="200">Zucker</option>
-                <option style="font-size:16px" value="224">Öl</option>
-                <option style="font-size:16px" value="100">Mandeln</option>
-                <option style="font-size:16px" value="225">Butter</option>
-                <option style="font-size:16px" value="128">Saaten</option>
-                <option style="font-size:16px" value="240">Flüssigkeiten</option>
-                <option style="font-size:16px" value="340">Honig</option>
-                <option style="font-size:16px" value="240">Sahne / Joghurt</option>
-                <option style="font-size:16px" value="180">Salz</option>
-        </select>
+    <div id="bottomWrapper" class="wrapper3">
+        <div class="headline3">
+            <h1>Von Gramm in Cups & mehr</h1>
+        </div>
+        <div class="sideImageBottom">
+            <img src="https://cdn.pixabay.com/photo/2020/11/30/14/38/crinkles-5791082__480.jpg" />
+        </div>
+        <div id="GramsOuncesChoice" class="unitChoice">
+            <form>
+                <group id="groupChoiceGrams" class="inline-radio" onchange="displayGramsOunces()">
+                    <div id="SetGrams"><input type="radio" name="units2" value="Grams" checked><label>Gramm</label></div>
+                    <div id="SetOunces"><input type="radio" name="units2" value="Ounces"><label>Unzen (oz)</label></div>
+                </group>
+            </form>
+        </div>
+        <div class="form3">
+            <form id="numberInputSecond" class="otherwayForm">
+                Wähle eine Zutat<br>
+                    <select id="ingrListSecond" onchange="setIngrTextSecond()">
+                        <option style="font-size:16px;color:grey" value="0">--Bitte wählen--</option>
+                        <option style="font-size:16px" value="225">Butter</option>
+                        <option style="font-size:16px" value="240">Flüssigkeiten</option>
+                        <option style="font-size:16px" value="340">Honig</option>
+                        <option style="font-size:16px" value="130">Mehl</option>
+                        <option style="font-size:16px" value="100">Mandeln (gehackt)</option>
+                        <option style="font-size:16px" value="224">Öl</option>
+                        <option style="font-size:16px" value="128">Saaten</option>
+                        <option style="font-size:16px" value="240">Sahne / Joghurt</option>
+                        <option style="font-size:16px" value="180">Salz</option>
+                        <option style="font-size:16px" value="200">Zucker</option>
+                    </select>
 
-            <p class="errorMessages" id="errorIngSecond"></p><br>
+                <p class="errorMessages" id="errorIngSecond"></p><br>
 
-            <input class="input-grams" id="inputFieldGrams" type="number" placeholder="Menge eingeben">
-            <p class="errorMessages" id="errorAmtSecond"></p><br>
+                <input class="input-grams" id="inputFieldGrams" type="number" placeholder="Menge eingeben">
+                <p class="errorMessages" id="errorAmtSecond"></p><br>
 
-            <input class="btn" onclick="convertToCups(),setIngrTextSecond()" type="button" value="In Cups umrechnen">
-            <input class="btn" onclick="convertToTablespoons(),setIngrTextSecond()" type="button" value="In Esslöffel umrechnen">
-            <input class="btn" onclick= "convertToTeaspoons(), setIngrTextSecond()" type="button" value="In Teelöffel umrechnen"><br>
-            <input class="btn" onclick="resetButtonSecond()" type="button" value="Zurücksetzen">
-        </form>
-    </div><br>
-    <div id="result2" class="resultOw">
-        <label id="sentenceSecond" style="font-size:22px">Ergebnis:</label><br>
-        <input id="resultSecond" disabled type="text" style="width: 150px; height:40px; text-align:center; font-size:30px; background-color:white; color:black"><br>
-        <label id="sentenceThird" style="font-size:22px"></label><br>
-    </div>
-    <br>
-
-    <!-- partial -->
-    <script  src="JavaScriptGer.js"></script>
-    <div class="lastQueriesOw">
-        <p>Deine letzten Umrechnungen:</p>
-        <button class="btnList" onclick="clearSecondListGer()">Liste leeren</button>
+                <input class="btn" onclick="convertToCups(),setIngrTextSecond()" type="button" value="In Cups umrechnen">
+                <input class="btn" onclick="convertToTablespoons(),setIngrTextSecond()" type="button" value="In Esslöffel umrechnen">
+                <input class="btn" onclick="convertToTeaspoons(), setIngrTextSecond()" type="button" value="In Teelöffel umrechnen"><br>
+                <input class="btn" onclick="resetButtonSecond()" type="button" value="Zurücksetzen">
+            </form>
+        </div><br>
+        <div id="result2" class="resultOw">
+            <label id="sentenceSecond" style="font-size:22px">Ergebnis:</label><br>
+            <input id="resultSecond" disabled type="text" style="width: 150px; height:40px; text-align:center; font-size:30px; background-color:white; color:black"><br>
+            <label id="sentenceThird" style="font-size:22px"></label><br>
+        </div>
         <br>
-        <ul id="queriesListOw" style="list-style-type:none"></ul>
+
+        <!-- partial -->
+        <script src="JavaScriptGer.js"></script>
+        <div class="lastQueriesOw">
+            <p>Deine letzten Umrechnungen:</p>
+            <p style="color:#7fffd4; font-size:10px">Lade die Seite neu, um die Liste zu leeren</p>
+            <br>
+            <ul id="queriesListOw" style="list-style-type:none"></ul>
+        </div>
     </div>
-</div>
 </section>
 </body>
 <footer>
